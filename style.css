@@ -1,0 +1,85 @@
+@import url("https://uilight.netlify.app/main.css");
+@import url("https://uilight.netlify.app/main.css");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+
+.card-vertical{
+    width: 16rem;
+}
+.card-image-container{
+    width: 100%;
+    height: 240px;
+}
+
+.card-image{
+    height: 300px;
+    object-fit: contain;
+}
+.star{
+    color: orange;
+}
+.card-price{
+    gap: 4px;
+}
+.price-strike-through,.discount{
+    font-size: 14px;
+}
+.gap-sm{
+    gap:8px;
+}
+.heading{
+    background-color: var(--background-color);
+    padding: 1rem 3rem;
+    justify-content: space-between;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+.product-products{
+    padding: 2rem 2rem;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;           
+   
+}
+.wishlist{
+    position: absolute;
+    background-color: white;
+    top: 8px;
+    right: 8px;     
+    border: none;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;        
+    padding: 8px 12px;
+    border-radius: 50%;
+}
+.inline-flex{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;    
+}
+.search-box-input{
+    width: 20rem;
+    border: none;
+   padding-left: 2rem;
+   height: 2.5rem;
+
+   font-size: 1rem;
+    border-bottom: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 16px;
+   
+    background:transparent;
+}
+.search-box-input:focus{
+    outline: none;
+}
+.search-icon{
+    top:5px;
+}
+.wishlist-active{
+    fill: red;
+  
+}
