@@ -1,28 +1,36 @@
 import { products } from "./db/product.js";
+import{CreateProductCard} from "./createproductcart.js"
+import { findProductsInCard } from "./utils/productInCart.js";
 console.log(products);
 
 
 const productContainer = document.getElementById("products");
 let cart=[]
-const findProductsInCard=(cart,productId)=>{
-    let isProductInCart=(cart&&cart.length>0&&cart.some(({_id})=>_id===productId))
-        return isProductInCart
-}
+
+
+
 
 productContainer.addEventListener("click",(e)=>{
     
  
-   
+    
     if(!findProductsInCard(cart,e.target.dataset.id)){
          const productToAddToCart=products.filter(({_id})=>_id===e.target.dataset.id)
          
     cart=[...cart,...productToAddToCart]
+    localStorage.setItem("cart",JSON.stringify(cart))
     console.log(cart)
     const cartButton=e.target;
     cartButton.innerHTML="Go To Cart<span class='material-icons-outlined'>shopping_cart</span>"
   
     }else{
-        location.href="cart.html"
+        window.location.href="cart.html"
     }
 
+})
+
+CreateProductCard(products,productContainer,findProductsInCard,"products")
+let carts=document.getElementById("cart")
+carts.addEventListener("click",()=>{
+    window.location.href="./cart.html"
 })
