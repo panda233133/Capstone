@@ -33,7 +33,30 @@ shopping_cart
         </ul>
     </nav>
 </header>
-    <div id="products" class="d-flex wrap gap product-products"></div>
+     <div class="d-flex  product-products">
+        <aside class="side-bar">
+            <h3 class="heading-3"></h3>
+            <div class="filter-container">
+                <div class="d-flex align-center gap">
+                    <input data-rating="4" class="radio" type="radio" name="rating" id="rating1">
+                    <label data-rating="4" class="label" for="rating1">4 stars & above</label>
+                </div>
+                <div class="d-flex align-center gap">
+                    <input data-rating="3"  class="radio" type="radio" name="rating" id="rating2">
+                    <label data-rating="3" class="label" for="rating2">3 stars & above</label>
+                </div>
+                <div class="d-flex align-center gap">
+                    <input data-rating="2" class="radio" type="radio" name="rating" id="rating3">
+                    <label data-rating="2" class="label" for="rating3">2 stars & above</label>
+                </div>
+                <div class="d-flex align-center gap">
+                    <input data-rating="1" class="radio" type="radio" name="rating" id="rating4 ">
+                    <label data-rating="1" class="label" for="rating4">1 stars & above</label>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div id="products" class="d-flex wrap gap product-container"></div>
    
 <script type="module" src="index.js"></script>
 </body>

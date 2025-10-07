@@ -8,6 +8,7 @@ const productContainer = document.getElementById("products");
 let cart=[]
 
 
+const filterContainer=document.querySelector(".side-bar")
 
 
 productContainer.addEventListener("click",(e)=>{
@@ -29,8 +30,20 @@ productContainer.addEventListener("click",(e)=>{
 
 })
 
+
+
+filterContainer.addEventListener("click",(event)=>{
+    
+    const updatedProducts=products.filter(({rating})=>rating>=Number(event.target.dataset.rating))
+    productContainer.innerHTML=""
+    CreateProductCard(updatedProducts,productContainer,findProductsInCard,"products")
+
+})
+
+
 CreateProductCard(products,productContainer,findProductsInCard,"products")
 let carts=document.getElementById("cart")
 carts.addEventListener("click",()=>{
     window.location.href="./cart.html"
 })
+
